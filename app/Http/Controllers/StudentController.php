@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Imports\StudentImport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -10,7 +11,8 @@ class StudentController extends Controller
 {
     public function index()
     {
-        return view('main');
+        $students = Student::paginate(10);
+        return view('main', compact('students'));
     }
 
     public function import(Request $request)
