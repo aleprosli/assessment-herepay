@@ -6,15 +6,24 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Upload From File</label>
-                        <input class="form-control" type="file" id="formFile">
+                    <form method="POST" action="{{ route('student.upload') }}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                            @if( session()->has('alert'))
+                                <div class="alert {{ session()->get('alert-type') }}">
+                                    {{ session()->get('alert') }}
+                                </div>
+                            @endif
+                            
+                            <label for="formFile" class="form-label">Upload From File</label>
+                            <input class="form-control" type="file" name="file" id="formFile">
 
-                        <div class="mt-2">
-                            <button type="submit" class="btn btn-primary">Upload</button>
-                            <button type="button" class="btn btn-danger">Cancel</button>
+                            <div class="mt-2">
+                                <button type="submit" class="btn btn-primary">Upload</button>
+                                <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
