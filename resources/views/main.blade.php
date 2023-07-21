@@ -28,9 +28,18 @@
             </div>
 
             <div class="card mt-2">
+                <form action="" method="">
+                    <div class="input-group mt-2 p-2">
+                        <input type="text" class="form-control" name="search" value="{{ request()->get('search') }}" placeholder="Search student by anything">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </div>
+                        </input>
+                    </div>
+                </form>
                 <div class="card-body">
                     @if(empty($students->first()))
-                        <p>No Student, please add atleast one.</p>
+                        <p>No student found.</p>
                     @else
                         <table class="table table-sm">
                             <caption>List of {{ $students->total() }} students</caption>

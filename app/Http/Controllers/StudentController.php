@@ -9,9 +9,16 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class StudentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::paginate(10);
+        $students = Student::query();
+
+        if ($request->search) {
+            $students = Student::searchStudent($request->search);
+        }
+
+        $students = $students->paginate(10);
+        
         return view('main', compact('students'));
     }
 
