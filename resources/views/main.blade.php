@@ -16,8 +16,10 @@
                             @endif
 
                             <label for="formFile" class="form-label">Upload From File</label>
-                            <input class="form-control" type="file" name="file" id="formFile">
-
+                            <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="formFile">
+                            @error('file')
+                                <div class="mt-1 alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <div class="mt-2">
                                 <button type="submit" class="btn btn-primary">Upload</button>
                                 <button type="button" class="btn btn-danger">Cancel</button>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Imports\StudentImport;
+use App\Http\Requests\ImportRequest;
 use Maatwebsite\Excel\Facades\Excel;
 
 class StudentController extends Controller
@@ -22,15 +23,8 @@ class StudentController extends Controller
         return view('main', compact('students'));
     }
 
-    public function import(Request $request)
+    public function import(ImportRequest $request)
     {
-        if (!$request->hasFile('file')) {
-            return redirect()->to('/')->with([
-                'alert-type' => 'alert-warning',
-                'alert' => 'Please add file!'
-            ]);
-        }
-
         Excel::import(new StudentImport, $request->file('file'));
         
         return redirect()->to('/')->with([
