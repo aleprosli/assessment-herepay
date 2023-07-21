@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Imports\StudentImport;
 use App\Http\Requests\ImportRequest;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\StudentTemplateExport;
 
 class StudentController extends Controller
 {
@@ -41,5 +42,10 @@ class StudentController extends Controller
             'alert-type' => 'alert-success',
             'alert' => __('student.destroy')
         ]);
+    }
+
+    public function template()
+    {
+        return Excel::download(new StudentTemplateExport, 'student.xlsx');
     }
 }
