@@ -15,4 +15,12 @@ class Student extends Model
         'level',
         'parent_contact',
     ];
+
+    public function scopeSearchStudent($query, $search)
+    {
+        return $query->where('name','LIKE','%'.$search.'%')
+        ->orWhere('level','LIKE','%'.$search.'%')
+        ->orWhere('class','LIKE','%'.$search.'%')
+        ->orWhere('parent_contact','LIKE','%'.$search.'%');
+    }
 }
