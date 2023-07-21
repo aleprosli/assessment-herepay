@@ -16,6 +16,7 @@ use App\Http\Controllers\StudentController;
 
 Route::controller(StudentController::class)->group(function () {
     Route::get('/', 'index')->name('student.index');
+    Route::get('/student/template', 'template')->name('student.template');
     Route::post('/student/upload', 'import')->name('student.upload');
     Route::get('/student/destroy/{student}', 'destroy')->name('student.destroy');
 });
