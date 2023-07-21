@@ -14,8 +14,10 @@
                                     {{ session()->get('alert') }}
                                 </div>
                             @endif
-
-                            <label for="formFile" class="form-label">Upload From File</label>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label for="formFile" class="form-label">Upload From File</label>
+                                <a href="{{ route('student.template') }}">Download Excel Template</a>
+                            </div>
                             <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="formFile">
                             @error('file')
                                 <div class="mt-1 alert alert-danger">{{ $message }}</div>
