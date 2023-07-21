@@ -40,7 +40,7 @@ class StudentController extends Controller
 
         return redirect()->to('/')->with([
             'alert-type' => 'alert-success',
-            'alert' => __('student.destroy')
+            'alert' => __('student.delete')
         ]);
     }
 
