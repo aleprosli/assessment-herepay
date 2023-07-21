@@ -29,7 +29,7 @@ class StudentController extends Controller
         
         return redirect()->to('/')->with([
             'alert-type' => 'alert-success',
-            'alert' => 'Student successfully added!'
+            'alert' => __('student.create')
         ]);
     }
 
@@ -39,7 +39,7 @@ class StudentController extends Controller
 
         return redirect()->to('/')->with([
             'alert-type' => 'alert-success',
-            'alert' => 'Student successfully removed!'
+            'alert' => __('student.destroy')
         ]);
     }
 }
