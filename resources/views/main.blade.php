@@ -33,7 +33,7 @@
                         <p>No Student, please add atleast one.</p>
                     @else
                         <table class="table table-sm">
-                            <caption>List of {{ $students->total() }} users</caption>
+                            <caption>List of {{ $students->total() }} students</caption>
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -41,6 +41,7 @@
                                     <th scope="col">Level</th>
                                     <th scope="col">Class</th>
                                     <th scope="col">Parent Contact</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,6 +52,9 @@
                                         <td>{{ $student->level }}</td>
                                         <td>{{ $student->class }}</td>
                                         <td>{{ $student->parent_contact }}</td>
+                                        <td>
+                                            <a onclick="return confirm('Are you sure to remove this student?')" href="{{ route('student.destroy', $student) }}" class="btn btn-danger">Remove</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

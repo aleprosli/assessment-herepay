@@ -16,7 +16,8 @@ use App\Http\Controllers\StudentController;
 
 Route::controller(StudentController::class)->group(function () {
     Route::get('/', 'index')->name('student.index');
-    Route::post('/upload', 'import')->name('student.upload');
+    Route::post('/student/upload', 'import')->name('student.upload');
+    Route::get('/student/destroy/{student}', 'destroy')->name('student.destroy');
 });
 
 Auth::routes();
