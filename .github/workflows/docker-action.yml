@@ -1,31 +1,31 @@
 name: Docker Image CI
 
-  on:
-    push:
-      branches: [ "main" ]
-    pull_request:
-      branches: [ "main" ]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-  jobs:
+jobs:
 
-    build:
+  build:
 
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
-      - uses: actions/checkout@v3
-      - name: Build the Docker image
-        run: docker-compose build
-      - name: Run the Docker image
-        run: docker-compose up -d --build
-        
-      - name: Run Composer
-        run: docker-compose run --rm composer install --optimize-autoloader --no-dev -vvv
-      - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example.action', '.env');"
-      - name: Directory Permissions
-        run: chmod -Rf 777 storage
-      - name: Generate key
-        run: docker-compose run --rm artisan key:generate
-      - name: Config and migrate database
-        run: docker-compose run --rm artisan migrate:fresh --seed
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker-compose build
+    - name: Run the Docker image
+      run: docker-compose up -d --build
+      
+    - name: Run Composer
+      run: docker-compose run --rm composer install --optimize-autoloader --no-dev -vvv
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example.action', '.env');"
+    - name: Directory Permissions
+      run: chmod -Rf 777 storage
+    - name: Generate key
+      run: docker-compose run --rm artisan key:generate
+    - name: Config and migrate database
+      run: docker-compose run --rm artisan migrate:fresh --seed
