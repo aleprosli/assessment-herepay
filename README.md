@@ -1,66 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Herepay Assessement
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Project Description : 
+#### Tasks
+### `What you need to do?`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/1a7751c1-0b4b-47d6-a176-8ed805be7c12)
 
-## About Laravel
+#### Implementation
+- Using Laravel Framework, PHP
+- Bootstrap - Basic CSS
+- Maat Website Package - To upload and import xlsx/csv/etc (since no restriction in question, i decide to use this package)
+- Form Request Validation - Complex validation scenarios
+- Scope - Encapsulate the syntax used to execute a query
+- Localization - Dynamically message
+- Pagination
+- Docker - Containerize webapp, thus it is small but help me ease to deploy hihi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Screenshot
+### `Main`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/e41d95bb-8d23-4f8e-8c20-543141579a3e)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### `Download Excel Template`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/7b1a107a-0a5d-4d27-ac63-5fd006f19d56)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### `Upload Excel Template`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/49f90521-2921-4b28-9c05-f541b209fd06)
 
-## Learning Laravel
+### `New Data Xlsx`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/c8e80d49-a889-48d4-9168-a3b6568f513b)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### `Upload New Data Xlsx`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/22e79e31-bfd5-439f-959c-a0c8bf2b131b)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### `Remove Student`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/fd3ba639-3b8c-4ac9-98b3-37cfe4732c65)
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/49358945-9ad6-4419-9a94-6f5886824284)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### `Search Student Name`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/27403560-da87-4059-a973-52dc692d415f)
 
-## Laravel Sponsors
+### `Search Student Class`
+![image](https://github.com/aleprosli/assessment-herepay/assets/72934759/e7d421f3-f11d-4a63-ab64-4374168487d0)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
